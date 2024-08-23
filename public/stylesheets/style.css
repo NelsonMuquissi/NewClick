@@ -16,7 +16,7 @@ body {
   color:#fff;
 }
 
-header,main,footer{
+header,main,aside,footer{
   display: flex;
   margin: 3px;
   justify-content: center;
@@ -26,28 +26,29 @@ header,main,footer{
 header{
   flex: 1 1 100vw;
   flex-direction: column;
-
-  & h1{
-    font-size: 34pt;
-    margin-top: 70px;
-  }
-
-  & h4{
-    font-size: 20pt;
-    margin-top: 20px;
-  }
+  height: 100px;
 }
 
 main{
   flex-direction: column;
   flex: 1 1 100vw;
-  margin-top: -50px;
+  height: calc(100vh - 324px);
   /* background-color: aqua; */
 
   & section{
     display: flex;
     justify-content: center;
     width: 100%;
+  }
+
+    & h1{
+    font-size: 34pt;
+    margin-top: 0px;
+  }
+
+  & h4{
+    font-size: 20pt;
+    margin-bottom: 6px;
   }
 
   & form{
@@ -60,8 +61,8 @@ main{
     height: 300px;
     border-radius: 8px;
     border-radius: 10px;
-width: 400px;
-padding: 40px;
+    width: 400px;
+    padding: 40px;
   }
   & input{
     padding: 10px 0;
@@ -92,12 +93,15 @@ padding: 40px;
   }
 }
 
+aside{
+  flex: 1 1 100vw;
+  height: 100px;
+}
+
 footer{
   background-color: #0f1827;
   height: 100px;
-  margin-bottom: -30px;
-  
-flex: 1 1 100vw;
+  flex: 1 1 100vw;
 
 & p{
   font-size: 12pt;
