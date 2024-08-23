@@ -12,9 +12,9 @@ router.post("/entrar", HomeController.login);
 router.get("/sair", HomeController.logout);
 
 /* GET users listing. */
-router.get("/", UserController.user);
+router.get("/user", UserController.user);
 
 /* GET home page contacto. */
-router.get("/", ContactoController.index);
+router.get("/contacto", ContactoController.index);
 
 export default router;
