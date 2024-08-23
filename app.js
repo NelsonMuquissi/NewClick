@@ -4,7 +4,7 @@ import cookieParser from 'cookie-parser'
 import logger from 'morgan'
 import path from 'path'
 import session from 'express-session'
-import bodyParser from 'body-parser'
+// import bodyParser from 'body-parser'
 // Rotas do sistema 
 import routes from './routes/routes.js'
 
@@ -15,7 +15,7 @@ const app = express();
 app.set('views', 'views');
 app.set('view engine', 'ejs');
 
-// app.use(logger('dev'));
+app.use(logger('dev'));
 
 app.use(session({
   secret: "my session",
@@ -26,12 +26,12 @@ app.use(session({
   }
 }))
 
-// app.use(cookieParser());
-// app.use(bodyParser.urlencoded({ extended: false }));
+app.use(cookieParser('NewClick'));
 // app.use(bodyParser.json());
 app.use(express.json());
-app.use(express.urlencoded());
+app.use(express.urlencoded({extended: false}));
 app.use(express.static('public'));
+
 
 app.use(routes)
 

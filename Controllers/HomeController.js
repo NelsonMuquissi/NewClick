@@ -15,6 +15,7 @@ class HomeController {
       const usuario = req.body
       
       usuario['contacto'] = []
+      req.session.usuario = usuario
 
       res.redirect("/contacto")
     }else{
