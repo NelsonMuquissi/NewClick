@@ -93,7 +93,14 @@ padding: 40px;
 }
 
 footer{
+  background-color: #0f1827;
+  height: 100px;
+  margin-bottom: -30px;
+  
 flex: 1 1 100vw;
 
+& p{
+  font-size: 12pt;
+}
 }
 

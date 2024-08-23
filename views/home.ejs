@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>NewClick - Agenda de Contactos</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
+  <% include ./partial/header.ejs %>
     <header>
       <h1>NewClick</h1>
       <h4>Seja Bem Vindo!</h4>
@@ -13,15 +7,14 @@
     <main>
       <section>
         <form action="/entrar" method="post">
-          <input type="text" name="nome" placeholder="Digite o seu nome">
+          <input type="text" name="nome[nome]" placeholder="Digite o seu nome">
           
-          <input type="text" name="email" placeholder="Digite o seu e-mail">
+          <input type="text" name="email[email]" placeholder="Digite o seu e-mail">
           
           <button type="submit">Entrar</button>
         </form>
       </section>
     </main>
     <aside></aside>
-    <footer></footer>
-  </body>
-</html>
+    <% include ./partial/footer.ejs %>
+    

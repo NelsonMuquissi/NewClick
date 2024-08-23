@@ -3,8 +3,6 @@ import express from 'express'
 import cookieParser from 'cookie-parser'
 import logger from 'morgan'
 import path from 'path'
-
-
 // Rotas do sistema 
 import indexRouter from './routes/home.js'
 import usersRouter from './routes/users.js'
@@ -16,11 +14,14 @@ const app = express();
 app.set('views', 'views');
 app.set('view engine', 'ejs');
 
-app.use(logger('dev'));
+// app.use(logger('dev'));
+
+// app.use(express.cookieParser('NewClick'));
+// app.use(express.session());
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
+app.use(express.urlencoded());
 app.use(express.static('public'));
+
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
