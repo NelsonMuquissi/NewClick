@@ -16,5 +16,9 @@ router.get("/user", UserController.user);
 
 /* GET home page contacto. */
 router.get("/contacto", ContactoController.index);
+router.get("/contacto/:id", ContactoController.show);
+router.post("/contacto", ContactoController.store);
+router.put("/contacto/:id", ContactoController.update);
+router.delete("/contacto/:id", ContactoController.delete);
 
 export default router;
