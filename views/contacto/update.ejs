@@ -1,0 +1,19 @@
+<% include ../partial/header.ejs %>
+<header>
+  <h2>NewClick - Agenda de contatos</h2>
+</header>
+<main>
+  <section>
+    <form action="/contato/<%- id %>" method="post">
+      <input type="hidden" name="_method" value="put" />
+      <label>Nome:</label>
+      <input type="text" name="contato" value="<%- contato.nome %>" />
+      <label>E-mail:</label>
+      <input type="text" name="contato" value="<%- contato.email %>" />
+      <button type="submit">Atualizar</button>
+    </form>
+  </section>
+  <% include ../partial/exit.ejs %>
+</main>
+<aside></aside>
+<% include ../partial/footer.ejs %>
