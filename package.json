@@ -13,6 +13,7 @@
     "dotenv": "^16.4.5",
     "ejs": "~2.6.1",
     "express": "~4.16.1",
+    "express-load": "^1.1.16",
     "http-errors": "~1.6.3",
     "mongoose": "^8.5.4",
     "morgan": "~1.9.1"

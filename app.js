@@ -6,7 +6,7 @@ import path from 'path'
 
 
 // Rotas do sistema 
-import indexRouter from './routes/index.js'
+import indexRouter from './routes/home.js'
 import usersRouter from './routes/users.js'
 
 const app = express();
