@@ -8,8 +8,6 @@ class HomeController {
   login(req, res, next){ 
     const nome = req.body.nome
     const email = req.body.email
-    
-    console.log("Nome",nome)
 
     if(nome && email){
       const usuario = req.body
