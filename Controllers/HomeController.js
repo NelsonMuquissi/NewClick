@@ -9,14 +9,14 @@ class HomeController {
     const nome = req.body.nome
     const email = req.body.email
     
-    
+    console.log("Nome",nome)
 
     if(nome && email){
-      const Usuario = req.body.usuario
+      const usuario = req.body.usuario
       
-      usuario['contactos'] = []
+      // usuario['contacto'] = []
 
-      res.redirect('/contactos')
+      res.redirect('./contacto/contacto', usuario)
     }
 
   }

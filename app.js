@@ -6,9 +6,7 @@ import path from 'path'
 import session from 'express-session'
 import bodyParser from 'body-parser'
 // Rotas do sistema 
-import indexRouter from './routes/home.js'
-import usersRouter from './routes/users.js'
-import contactRouter from './routes/contacto.js'
+import routes from './routes/routes.js'
 
 const app = express();
 
@@ -35,10 +33,7 @@ app.use(express.json());
 app.use(express.urlencoded());
 app.use(express.static('public'));
 
-
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/entrar', contactRouter)
+app.use(routes)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
