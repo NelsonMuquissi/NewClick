@@ -3,6 +3,8 @@ import express from 'express'
 import cookieParser from 'cookie-parser'
 import logger from 'morgan'
 import path from 'path'
+import session from 'express-session'
+import bodyParser from 'body-parser'
 // Rotas do sistema 
 import indexRouter from './routes/home.js'
 import usersRouter from './routes/users.js'
@@ -16,8 +18,18 @@ app.set('view engine', 'ejs');
 
 // app.use(logger('dev'));
 
-// app.use(express.cookieParser('NewClick'));
-// app.use(express.session());
+app.use(session({
+  secret: "my session",
+  resave: false,
+  saveUninitialized: true,
+  cookie: {
+    maxAge: 600000*10
+  }
+}))
+
+// app.use(cookieParser());
+// app.use(bodyParser.urlencoded({ extended: false }));
+// app.use(bodyParser.json());
 app.use(express.json());
 app.use(express.urlencoded());
 app.use(express.static('public'));
