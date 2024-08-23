@@ -13,27 +13,27 @@ var http = require('http');
  */
 
 var PORT = normalizePort(process.env.PORT || '3000');
-// app.set('port', port);
+app.set('port', port);
 
 /**
  * Create HTTP server.
  */
 
-// var server = http.createServer(app);
+var server = http.createServer(app);
 
 /**
  * Listen on provided port, on all network interfaces.
  */
 
-app.listen(PORT, (error) =>{
-  if(error) return console.log({mensagem: {Erro: error}})
-  console.log(`Servidor rodando em http://localhost:${PORT}/`)
-  onListening()
-})
+// app.listen(PORT, (error) =>{
+//   if(error) return console.log({mensagem: {Erro: error}})
+//   console.log(`Servidor rodando em http://localhost:${PORT}/`)
+//   onListening()
+// })
 
-// server.listen(port);
-// server.on('error', onError);
-// server.on('listening', onListening);
+server.listen(port);
+server.on('error', onError);
+server.on('listening', onListening);
 
 /**
  * Normalize a port into a number, string, or false.
