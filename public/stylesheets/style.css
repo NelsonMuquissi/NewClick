@@ -58,7 +58,10 @@ main{
     justify-content: center;
     background: rgba(0,0,0,.5);
     height: 300px;
-    border-radius: 5px;
+    border-radius: 8px;
+    border-radius: 10px;
+width: 400px;
+padding: 40px;
   }
   & input{
     padding: 10px 0;
