@@ -4,14 +4,34 @@
 </header>
 <main>
   <section>
-    <form action="/contato/<%- id %>" method="post">
-      <input type="hidden" name="_method" value="delete"/>
-      <p><label>Nome:</label><%- contato.nome %></p>
-      <p><label>E-mail:</label><%- contato.email %></p>
+    <form action="" method="post">
+      <!-- <input type="hidden" name="_method" value="delete"/>
+      <p><label>Nome:</label></p>
+      <p><label>E-mail:</label></p>
       <p>
         <button type="submit">Excluir</button>
-        <a href="/contato/<%- id %>/editar">Editar</a>
-      </p>
+        <a href="">Editar</a>
+      </p> -->
+      <table style="width: 500px; text-align: center;" border="1">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>E-mail</th>
+      <th>Ação</th>
+    </tr>
+  </thead>
+      <tbody>
+    <tr>
+      
+      <td><%= contacto.nome %></td>
+      <td><%= contacto.email %></td>
+      <td>
+        <a href="/update/<%= contacto.id %>">idit</a>
+         - <a href="/del/<%= contacto.id %>">X</a> -
+          <a href="/show/<%= contacto.id %>">det</a></td>
+    </tr>
+</tbody>
+</table>
     </form>
   </section>
   <% include ../partial/exit.ejs %>

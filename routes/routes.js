@@ -17,12 +17,12 @@ router.get("/user", UserController.user);
 
 /* GET home page contacto. */
 router.get("/contacto", authentication ,ContactoController.index);
-router.get("/contacto/:id", authentication, ContactoController.show);
-router.post("/contacto", authentication, ContactoController.store);
+router.get("/show/:id", authentication, ContactoController.show);
+router.post("/contacto", authentication, ContactoController.newstore);
 router.get("/update/:id", authentication, ContactoController.up);
 router.post("/update/:id", authentication,ContactoController.update);
 router.get("/del/:id", authentication, ContactoController.delete);
 
-// router.get('update', authentication, ContactoController.up)
+router.get('/addcontacto', authentication, ContactoController.store)
 
 export default router;
