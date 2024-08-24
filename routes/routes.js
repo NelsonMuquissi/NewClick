@@ -21,7 +21,7 @@ router.get("/contacto/:id", authentication, ContactoController.show);
 router.post("/contacto", authentication, ContactoController.store);
 router.get("/update/:id", authentication, ContactoController.up);
 router.post("/update/:id", authentication,ContactoController.update);
-router.delete("/contacto/:id", authentication, ContactoController.delete);
+router.get("/del/:id", authentication, ContactoController.delete);
 
 // router.get('update', authentication, ContactoController.up)
 

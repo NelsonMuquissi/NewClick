@@ -66,10 +66,13 @@ class ContactoController {
   }
 
   delete(req, res) {
+    const index = req.session.index;
     const usuario = req.session.usuario;
     const id = req.params.id;
-    usuario.contacto.splice(id, 1);
-    res.redirect("/contacto");
+    usuario[index].contactos[id] = ''
+    console.log("Usuario:", usuario[index].contactos)
+    console.log("fgjchvkjbnl;ç")
+    res.redirect("../contacto");
   }
 }
 
