@@ -14,7 +14,7 @@ class HomeController {
         {
           nome: "nelson",
           email: "@",
-
+          
           contactos: [
             {
               nome: "cont",
