@@ -1,37 +1,14 @@
 <% include ../partial/header.ejs %>
 <header>
-  <h2>NewClick - Agenda de contatos</h2>
+  <h2>NewClick - Cadastrar contatos</h2>
 </header>
 <main>
   <section>
-    <form action="/contato" method="post">
-  <input type="text" name="nome" placeholder="Nome" />
+    <form action="/contacto" method="post">
+  <input type="text" name="nome" placeholder="Nome"/>
   <input type="text" name="email" placeholder="E-mail" />
   <button type="submit">Cadastrar</button>
 </form>
-<table>
-  <thead>
-    <tr>
-      <th>Nome</th>
-      <th>E-mail</th>
-      <th>Ação</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% contatos.forEach(function(contato, index) { %>
-    <tr>
-      <td><%- contato.nome %></td>
-      <td><%- contato.email %></td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
-<a href="/contato/<%- index %>">Detalhes</a>
-</td>
-</tr>
-<% }) %>
-</tbody>
-</table>
 </section>
   </section>
   <% include ../partial/exit.ejs %>

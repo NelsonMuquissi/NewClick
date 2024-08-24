@@ -2,6 +2,7 @@ import { Router } from "express";
 import HomeController from "../Controllers/HomeController.js";
 import ContactoController from "../Controllers/ContactoController.js";
 import UserController from "../Controllers/UserController.js";
+import authentication from "./authentication.js";
 
 const router = Router();
 
@@ -15,10 +16,11 @@ router.get("/sair", HomeController.logout);
 router.get("/user", UserController.user);
 
 /* GET home page contacto. */
-router.get("/contacto", ContactoController.index);
-router.get("/contacto/:id", ContactoController.show);
-router.post("/contacto", ContactoController.store);
-router.put("/contacto/:id", ContactoController.update);
-router.delete("/contacto/:id", ContactoController.delete);
+router.get("/contacto", authentication ,ContactoController.index);
+router.get("/contacto/:id", authentication, ContactoController.show);
+router.get("/addcontacto", authentication, ContactoController.redi);
+router.post("/contacto", authentication, ContactoController.store);
+router.put("/contacto/:id", authentication,ContactoController.update);
+router.delete("/contacto/:id", authentication, ContactoController.delete);
 
 export default router;

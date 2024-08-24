@@ -5,3 +5,5 @@ const authentication = (req, res, next) => {
         return next()
     }
 }
+
+export default authentication

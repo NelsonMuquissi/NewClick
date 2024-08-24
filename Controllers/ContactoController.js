@@ -2,9 +2,21 @@ class ContactoController {
   index(req, res) {
     // const usuario = req.session.usuario
     const usuario = req.session.usuario;
-    const contacto = usuario.contacto
-    const params = { usuario: usuario, contacto: contacto };
-    res.render("./contacto/", params);
+    console.table(usuario)
+    // const contacto = usuario.contacto
+    const index = req.session.index;
+    const params = { usuario: usuario, index: index};
+ 
+    res.render('./contacto/', params);
+  }
+
+  redi(req, res){
+    const usuario = req.session.usuario 
+    console.table(usuario);
+    // const contacto = usuario
+    console.log({usuario: usuario})
+    const params = { usuario: usuario };
+    res.render('./contacto/store', {usuario});
   }
 
   show(req, res) {
@@ -18,7 +30,7 @@ class ContactoController {
     const contacto = req.body.contacto
     const usuario = req.session.usuario
 
-    usuario.contacto.push(contacto)
+    // usuario.contacto.push(contacto)
 
     res.redirect('/contacto')
   }

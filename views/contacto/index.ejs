@@ -3,7 +3,32 @@
   <h2>NewClick - Agenda de contatos</h2>
 </header>
 <main>
-  <section><h2>Bem Vindo <%= usuario.nome %></h2></section>
+  <section>
+    <h2>Bem Vindo <%= usuario[0].nome %></h2>
+    <button type="submit"><a href="/addcontacto">Novo Contacto</a></button>
+  <section>
+  <table style="width: 500px; text-align: center;" border="1">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>E-mail</th>
+      <th>Ação</th>
+    </tr>
+  </thead>
+  <% usuario[index].contactos.map(contacto => { %>
+      <tbody>
+    <tr>
+      <td><%= contacto.nome %></td>
+      <td><%= contacto.email %></td>
+      <td>ff - <a href="">Detalhes</a></td>
+    </tr>
+</tbody>
+
+  <%})%>
+</table>
+    </section>
+  </section>
+
   <% include ../partial/exit.ejs %>
 </main>
 <aside></aside>
