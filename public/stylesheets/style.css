@@ -58,7 +58,7 @@ main{
     margin-bottom: 6px;
   }
 
-  & form{
+  & .forml{
     display: flex;
     flex-direction: column;
     width: 100%;

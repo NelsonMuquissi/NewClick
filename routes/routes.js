@@ -18,9 +18,11 @@ router.get("/user", UserController.user);
 /* GET home page contacto. */
 router.get("/contacto", authentication ,ContactoController.index);
 router.get("/contacto/:id", authentication, ContactoController.show);
-router.get("/addcontacto", authentication, ContactoController.redi);
 router.post("/contacto", authentication, ContactoController.store);
-router.put("/contacto/:id", authentication,ContactoController.update);
+router.get("/update/:id", authentication, ContactoController.up);
+router.post("/update/:id", authentication,ContactoController.update);
 router.delete("/contacto/:id", authentication, ContactoController.delete);
+
+// router.get('update', authentication, ContactoController.up)
 
 export default router;

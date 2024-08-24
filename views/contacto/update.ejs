@@ -1,15 +1,15 @@
 <% include ../partial/header.ejs %>
 <header>
-  <h2>NewClick - Agenda de contatos</h2>
+  <h2>NewClick - Atualizar Contacto da Agenda</h2>
 </header>
 <main>
   <section>
-    <form action="/contato/<%- id %>" method="post">
-      <input type="hidden" name="_method" value="put" />
+    <form class="forml" action="" method="post">
+      <input type="hidden" name="_method" value="put"/>
       <label>Nome:</label>
-      <input type="text" name="contato" value="<%- contato.nome %>" />
+      <input type="text" name="nome" value="<%= contacto.nome %>" />
       <label>E-mail:</label>
-      <input type="text" name="contato" value="<%- contato.email %>" />
+      <input type="text" name="email" value="<%= contacto.email %>" />
       <button type="submit">Atualizar</button>
     </form>
   </section>

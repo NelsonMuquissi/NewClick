@@ -12,15 +12,18 @@ class HomeController {
     if(nome && email){
       const usuario = [
         {
+          id: 1,
           nome: "nelson",
           email: "nelson@gmail.com",
 
           contactos: [
             {
+              id: 1,
               nome: "muquissi",
               email: "muquissi@gmail.com",
             },
             {
+              id: 2,
               nome: "zangui",
               email: "zangui@gmail.com",
             },
