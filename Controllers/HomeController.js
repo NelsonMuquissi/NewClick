@@ -13,16 +13,16 @@ class HomeController {
       const usuario = [
         {
           nome: "nelson",
-          email: "@",
-          
+          email: "nelson@gmail.com",
+
           contactos: [
             {
-              nome: "cont",
-              email: "cont@",
+              nome: "muquissi",
+              email: "muquissi@gmail.com",
             },
             {
-              nome: "cont1",
-              email: "cont1@",
+              nome: "zangui",
+              email: "zangui@gmail.com",
             },
           ],
         },
